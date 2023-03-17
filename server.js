@@ -1,14 +1,13 @@
 import { createServer } from "http";
 import { Server } from "socket.io";
 import express from "express";
-import cors from "cors";
 import initGame from './socket.js';
 
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://melodious-speculoos-b36439.netlify.app/",
         methods: ["GET", "POST"],
         credentials: true,
     }
