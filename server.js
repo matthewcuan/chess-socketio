@@ -7,7 +7,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://melodious-speculoos-b36439.netlify.app/",
+        origin: "https://melodious-speculoos-b36439.netlify.app",
         methods: ["GET", "POST"],
         credentials: true,
     }
