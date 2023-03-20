@@ -5,6 +5,8 @@ import initGame from './socket.js';
 
 const app = express();
 const server = createServer(app);
+
+// initializing socket server
 const io = new Server(server, {
     cors: {
         origin: "https://melodious-speculoos-b36439.netlify.app",
@@ -13,6 +15,7 @@ const io = new Server(server, {
     }
 });
 
+// when client connects to server
 io.on("connection", (socket) => {
 
     console.log('a user connected');
